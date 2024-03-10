@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>700</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>700</width>
+    <height>800</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>700</width>
+    <height>800</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#MainWindow {
+	background: rgb(61, 61, 61);
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="vertical_widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>701</width>
+      <height>1000</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="call_settings_ui">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>25</y>
+      <width>200</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>6</width>
+      <height>3</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>200</width>
+      <height>250</height>
+     </size>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/* Стиль QPushButton */
+QPushButton {
+    background-color: rgb(255, 151, 57);
+    color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    /*transition: width 0.5s;*/ /* Анимация увеличения высоты */
+}
+
+/* Стиль QPushButton при нажатии */
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #FF7832, stop: 1 #FF9739);
+}
+
+QPushButton:disabled {
+	background-color: rgba(255, 151, 57, 202);
+	color: rgba(255, 255, 255,100);
+/*	color: rgba(255, 255, 255, 191);*/
+}
+
+QPushButton:enabled {
+    background-color: rgb(255, 151, 57);
+    color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+/* Стиль QPushButton при наведении */
+QPushButton:hover {
+    width: 100px;
+}
+
+/* Стиль QLabel */
+QLabel {
+    transform: rotate(180);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Параметры нейросети</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="call_save">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>90</y>
+      <width>200</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>6</width>
+      <height>3</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>200</width>
+      <height>250</height>
+     </size>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/* Стиль QPushButton */
+QPushButton {
+    background-color: rgb(255, 151, 57);
+    color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    /*transition: width 0.5s;*/ /* Анимация увеличения высоты */
+}
+
+/* Стиль QPushButton при нажатии */
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #FF7832, stop: 1 #FF9739);
+}
+
+QPushButton:disabled {
+	background-color: rgba(255, 151, 57, 202);
+	color: rgba(255, 255, 255,100);
+/*	color: rgba(255, 255, 255, 191);*/
+}
+
+QPushButton:enabled {
+    background-color: rgb(255, 151, 57);
+    color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+/* Стиль QPushButton при наведении */
+QPushButton:hover {
+    width: 100px;
+}
+
+/* Стиль QLabel */
+QLabel {
+    transform: rotate(180);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Сохранить веса</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="call_load">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>90</y>
+      <width>200</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>6</width>
+      <height>3</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>200</width>
+      <height>250</height>
+     </size>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/* Стиль QPushButton */
+QPushButton {
+    background-color: rgb(255, 151, 57);
+    color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    /*transition: width 0.5s;*/ /* Анимация увеличения высоты */
+}
+
+/* Стиль QPushButton при нажатии */
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #FF7832, stop: 1 #FF9739);
+}
+
+QPushButton:disabled {
+	background-color: rgba(255, 151, 57, 202);
+	color: rgba(255, 255, 255,100);
+/*	color: rgba(255, 255, 255, 191);*/
+}
+
+QPushButton:enabled {
+    background-color: rgb(255, 151, 57);
+    color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+/* Стиль QPushButton при наведении */
+QPushButton:hover {
+    width: 100px;
+}
+
+/* Стиль QLabel */
+QLabel {
+    transform: rotate(180);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Загрузить веса</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="call_draw_window">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>160</y>
+      <width>200</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>6</width>
+      <height>3</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>200</width>
+      <height>250</height>
+     </size>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/* Стиль QPushButton */
+QPushButton {
+    background-color: rgb(255, 151, 57);
+    color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    /*transition: width 0.5s;*/ /* Анимация увеличения высоты */
+}
+
+/* Стиль QPushButton при нажатии */
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #FF7832, stop: 1 #FF9739);
+}
+
+QPushButton:disabled {
+	background-color: rgba(255, 151, 57, 202);
+	color: rgba(255, 255, 255,100);
+/*	color: rgba(255, 255, 255, 191);*/
+}
+
+QPushButton:enabled {
+    background-color: rgb(255, 151, 57);
+    color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+/* Стиль QPushButton при наведении */
+QPushButton:hover {
+    width: 100px;
+}
+
+/* Стиль QLabel */
+QLabel {
+    transform: rotate(180);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Окно рисования</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="load_bmp">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>160</y>
+      <width>200</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>6</width>
+      <height>3</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>200</width>
+      <height>250</height>
+     </size>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/* Стиль QPushButton */
+QPushButton {
+    background-color: rgb(255, 151, 57);
+    color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    /*transition: width 0.5s;*/ /* Анимация увеличения высоты */
+}
+
+/* Стиль QPushButton при нажатии */
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #FF7832, stop: 1 #FF9739);
+}
+
+QPushButton:disabled {
+	background-color: rgba(255, 151, 57, 202);
+	color: rgba(255, 255, 255,100);
+/*	color: rgba(255, 255, 255, 191);*/
+}
+
+QPushButton:enabled {
+    background-color: rgb(255, 151, 57);
+    color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+/* Стиль QPushButton при наведении */
+QPushButton:hover {
+    width: 100px;
+}
+
+/* Стиль QLabel */
+QLabel {
+    transform: rotate(180);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Загрузить BMP изображение</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="logging">
+    <property name="geometry">
+     <rect>
+      <x>34</x>
+      <y>300</y>
+      <width>631</width>
+      <height>461</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::WheelFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(61, 61, 61, 0.6);
+color: white;
+border: 1px solid rgba(204, 0, 204, 0.6);
+border-radius: 5px;       
+</string>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAsNeeded</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAsNeeded</enum>
+    </property>
+    <property name="sizeAdjustPolicy">
+     <enum>QAbstractScrollArea::AdjustToContents</enum>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="textInteractionFlags">
+     <set>Qt::TextSelectableByMouse</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="run_edu">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>230</y>
+      <width>200</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>6</width>
+      <height>3</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>200</width>
+      <height>250</height>
+     </size>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/* Стиль QPushButton */
+QPushButton {
+    background-color: rgb(255, 151, 57);
+    color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    /*transition: width 0.5s;*/ /* Анимация увеличения высоты */
+}
+
+/* Стиль QPushButton при нажатии */
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #FF7832, stop: 1 #FF9739);
+}
+
+QPushButton:disabled {
+	background-color: rgba(255, 151, 57, 202);
+	color: rgba(255, 255, 255,100);
+/*	color: rgba(255, 255, 255, 191);*/
+}
+
+QPushButton:enabled {
+    background-color: rgb(255, 151, 57);
+    color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+/* Стиль QPushButton при наведении */
+QPushButton:hover {
+    width: 100px;
+}
+
+/* Стиль QLabel */
+QLabel {
+    transform: rotate(180);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Запустить процесс 
+обучения/тестирования</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="abort_training">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>230</y>
+      <width>200</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>6</width>
+      <height>3</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>200</width>
+      <height>250</height>
+     </size>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/* Стиль QPushButton */
+QPushButton {
+    background-color: rgb(255, 151, 57);
+    color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    /*transition: width 0.5s;*/ /* Анимация увеличения высоты */
+}
+
+/* Стиль QPushButton при нажатии 
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #FF7832, stop: 1 #FF9739);
+}
+ */
+
+QPushButton:pressed {
+    background-color: rgb(61, 61, 61);
+    color: red;
+    border: 5px solid gray;
+    border-radius: 5px;
+}
+
+QPushButton:disabled {
+	background-color: rgba(255, 151, 57, 202);
+	color: rgba(255, 255, 255,100);
+/*	color: rgba(255, 255, 255, 191);*/
+}
+
+QPushButton:enabled {
+    background-color: rgb(255, 151, 57);
+    color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+/* Стиль QPushButton при наведении */
+QPushButton:hover {
+    width: 100px;
+}
+
+/* Стиль QLabel */
+QLabel {
+    transform: rotate(180);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Остановить обучение</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="call_graph">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>25</y>
+      <width>200</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>6</width>
+      <height>3</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>200</width>
+      <height>250</height>
+     </size>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/* Стиль QPushButton */
+QPushButton {
+    background-color: rgb(255, 151, 57);
+    color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    /*transition: width 0.5s;*/ /* Анимация увеличения высоты */
+}
+
+/* Стиль QPushButton при нажатии */
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #FF7832, stop: 1 #FF9739);
+}
+
+QPushButton:disabled {
+	background-color: rgba(255, 151, 57, 202);
+	color: rgba(255, 255, 255,100);
+/*	color: rgba(255, 255, 255, 191);*/
+}
+
+QPushButton:enabled {
+    background-color: rgb(255, 151, 57);
+    color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+/* Стиль QPushButton при наведении */
+QPushButton:hover {
+    width: 100px;
+}
+
+/* Стиль QLabel */
+QLabel {
+    transform: rotate(180);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>График ошибок 
+и статистика обучения</string>
+    </property>
+   </widget>
+   <zorder>vertical_widget</zorder>
+   <zorder>call_settings_ui</zorder>
+   <zorder>call_save</zorder>
+   <zorder>call_load</zorder>
+   <zorder>load_bmp</zorder>
+   <zorder>run_edu</zorder>
+   <zorder>abort_training</zorder>
+   <zorder>logging</zorder>
+   <zorder>call_draw_window</zorder>
+   <zorder>call_graph</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>700</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <addaction name="open_csv"/>
+    <addaction name="save_weight"/>
+    <addaction name="load_weight"/>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <action name="open_csv">
+   <property name="text">
+    <string>Открыть файл</string>
+   </property>
+  </action>
+  <action name="save_settings">
+   <property name="text">
+    <string>Сохранить настройки</string>
+   </property>
+  </action>
+  <action name="load_settings">
+   <property name="text">
+    <string>Загрузить настройки</string>
+   </property>
+  </action>
+  <action name="image">
+   <property name="text">
+    <string>в формате bmp/jpeg</string>
+   </property>
+  </action>
+  <action name="gif">
+   <property name="text">
+    <string>в формате gif</string>
+   </property>
+  </action>
+  <action name="auto_rtn">
+   <property name="text">
+    <string>Вращение объекта(авто)</string>
+   </property>
+  </action>
+  <action name="save_weight">
+   <property name="text">
+    <string>Сохранить веса</string>
+   </property>
+  </action>
+  <action name="load_weight">
+   <property name="text">
+    <string>Загрузить веса</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
